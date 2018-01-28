@@ -16,6 +16,7 @@
 from . import get_desired_value
 
 import os
+import shutil
 import tempfile
 from Crypto.PublicKey import RSA
 
@@ -158,8 +159,7 @@ def _write_key_file(_key_file_path,
         directory = os.path.dirname(expanded_key_path)
         if not os.path.exists(directory):
             os.makedirs(directory)
-        os.rename(temporary_file.name,
-                  expanded_key_path)
+        shutil.move(temporary_file.name, expanded_key_path)
     except OSError as e:
         raise NonRecoverableError(str(e))
 
