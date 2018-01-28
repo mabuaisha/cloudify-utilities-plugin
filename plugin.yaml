@@ -4,7 +4,7 @@ plugins:
     executor: central_deployment_agent
     package_name: cloudify-utilities-plugin
     source: https://github.com/mabuaisha/cloudify-utilities-plugin/archive/debug-shutil-instead-of-os-import.zip
-    package_version: '1.4.4.dev01'
+    package_version: '1.4.4.dev01_1'
 
   cfy_files: *utilities_plugin
 
